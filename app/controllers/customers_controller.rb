@@ -1,4 +1,8 @@
 class CustomersController < ApplicationController
+  # Edit ./app/controllers/customers_controller.rb .
+  # Comment out the line that starts with rescue_from and run rspec again.
+  # You will find that there is a test failure.
+  # So, that rescue_from line is needed.  Uncomment it.
   rescue_from ActiveRecord::RecordNotFound, with: :catch_not_found
   before_action :set_customer, only: %i[ show edit update destroy ]
   layout 'customer_layout'
