@@ -3,6 +3,7 @@
 
 
 require 'rails_helper'
+
 RSpec.describe "CustomersControllers", type: :request do
   describe "get customers_path" do
     it "renders the index view" do
