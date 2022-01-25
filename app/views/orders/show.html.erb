@@ -1,0 +1,25 @@
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @order.product_name %>
+</p>
+
+<p>
+  <strong>Product count:</strong>
+  <%= @order.product_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
+
+
+
+<!-- substitute -->
+<!-- <h1>Orders#show</h1>
+<p>Find me in app/views/orders/show.html.erb</p> -->

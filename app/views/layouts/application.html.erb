@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,6 +13,53 @@
   </head>
 
   <body>
+
+<!-- jumbotron -->
+<div class="jumbotron jumbo-background">
+   <h1 class="display-4">Customers and Orders</h1>
+ </div>
+
+    <!-- Using Bootstrap For Styling -->
+    <!-- We want to use a single layout, which is app/views/layouts/application.html.erb, so that we can have a single navbar and a single jumbotron. So take the line out of app/controllers/customer_controller.rb that says layout ‘customer_layout’. Then copy this section into the application.html.erb -->
+    <% if !flash[:alert].nil? %>
+          <p class="my_alert"><%= flash[:alert] %></p>
+        <% end %>
+        <nav class="navbar navbar-expand-sm   navbar-dark bg-primary">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown dmenu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Customers
+          </a>
+          <div class="dropdown-menu sm-menu">
+            <%= link_to 'List Customers', customers_path, class: "dropdown-item" %>
+            <%= link_to 'New Customer', new_customer_path, class: "dropdown-item" %>
+          </div>
+        </li>
+         <li class="nav-item dropdown dmenu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Orders
+          </a>
+          <div class="dropdown-menu sm-menu">
+            <%= link_to 'List Orders', orders_path, class: "dropdown-item" %>
+            <%= link_to 'New Order', new_order_path, class: "dropdown-item" %>
+          </div>
+        </li>
+        </ul>
+        </nav>
+
     <%= yield %>
+
+    <!-- Edit app/views/layouts/application.html.erb.
+    You are going to add a jumbotron div and a navbar.
+    The jumbotron div has a class called “jumbotron”.
+    You can put text inside as you choose.
+    The navbar should have two pulldown menus,
+    one for Customers and one for Orders.
+    The items in the Customers pulldown should be
+    List Customers and New Customer.
+    The items in the Orders pulldown should be List Orders and New Order.
+    Each should link to pages you already have. -->
+
+
   </body>
 </html>

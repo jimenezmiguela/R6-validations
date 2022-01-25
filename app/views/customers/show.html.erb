@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card shadow p-3 mb-5 bg-white rounded">
+<p>
+  <strong>First name:</strong>
+  <%= @customer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @customer.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+</div>
+
+<!-- In your various views, you have links and submit buttons.
+These should all be styled to look like Bootstrap buttons. -->
+<!-- <ex link_to 'Show', person, class: "btn btn-primary"  -->
+<%= link_to 'Edit', edit_customer_path(@customer),  class: "btn btn-primary" %>
+<%= link_to 'Back', customers_path %>

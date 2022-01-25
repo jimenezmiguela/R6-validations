@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customers</h1>
+
+<table class="table">
+<!-- <table> -->
+  <thead>
+    <tr>
+      <!-- <th>First name</th>
+      <th>Last name</th> -->
+
+      <!-- Additional Methods in the Customer Model Class -->
+      <th> Full name</th>
+
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+
+        <!-- <td><%= customer.first_name %></td>
+        <td><%= customer.last_name %></td> -->
+
+
+<td><i class="fas fa-bolt"><%= " " + customer.full_name %></i></td>
+
+
+        <td><%= customer.phone %></td>
+        <td><%= customer.email %></td>
+
+
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<!-- </div> -->
+
+<br>
+
+<!-- In your various views, you have links and submit buttons.
+These should all be styled to look like Bootstrap buttons. -->
+<%= link_to 'New Customer', new_customer_path, class: "btn btn-primary" %>
