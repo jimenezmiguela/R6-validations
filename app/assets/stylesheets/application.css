@@ -1,3 +1,8 @@
+/* Configuration, lesson 4.4 */
+ /* add Bootstrap to the environment */
+/*  edit app/assets/stylesheets/application.css to add this line: */
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,6 +15,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
+
+ .jumbo-background {
+   background-image: url('stars.jpg');
+   background-size: cover;
+ }
+
+ @font-face {
+    font-family: 'burrito';
+    src: url('burrito.TTF');
+ }
+
+ table, h1 {
+   font-family: 'burrito';
+   color: orange;
+ }
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+ /* @font-face {
+   font-family: "Open Sans";
+   src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+ } */

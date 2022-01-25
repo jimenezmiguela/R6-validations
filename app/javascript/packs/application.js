@@ -8,6 +8,13 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+/* Configuration, lesson 4.4, 1/21 */
+ /* add Bootstrap to the environment */
+// edit app/javascript/packs/application.js and add these two lines:
+// These lines should be added right after the import “channels” line.
+import "bootstrap"
+import "@fortawesome/fontawesome-free/css/all"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

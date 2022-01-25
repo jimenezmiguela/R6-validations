@@ -2,4 +2,7 @@
 
 <%= render 'form', customer: @customer %>
 
-<%= link_to 'Back', customers_path %>
+<!-- In your various views, you have links and submit buttons.
+These should all be styled to look like Bootstrap buttons. -->
+<!-- <ex link_to 'Show', person, class: "btn btn-primary"  -->
+<%= link_to 'Back', customers_path, class: "btn btn-primary" %>
